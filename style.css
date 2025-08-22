@@ -58,7 +58,7 @@ main {
     background-color: #E4E9F2;
 }
 
-main .menu {
+.wrapper-menu .menu {
     display: grid;
     padding: 0;
     list-style: none;
@@ -70,7 +70,7 @@ main .menu {
     margin: 0;
 }
 
-main .menu .item a {
+.wrapper-menu .menu .item a {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -82,16 +82,19 @@ main .menu .item a {
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
-    row-gap: 24px;
     color: #000;
     box-shadow: 4px 4px 16px 0 rgba(3, 23, 57, 0.06);
 }
 
-main .menu .item a:hover {
+.wrapper-menu .menu .item a:hover {
     color: #0052B7;
 }
 
-main .menu .item p {
+.wrapper-menu .menu .item a span {
+    padding-bottom: 24px;
+}
+
+.wrapper-menu .menu .item p {
     margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
@@ -106,7 +109,7 @@ footer .bg-footer {
 }
 
 @media (min-width: 576px) {
-    main .menu {
+    .wrapper-menu .menu {
         grid-template-columns: repeat(2, 1fr)
     }
 }
@@ -135,8 +138,9 @@ footer .bg-footer {
         align-items: center;
     }
 
-    main .menu {
-        grid-template-columns: repeat(4, 1fr)
+    .wrapper-menu .menu {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
     }
 
     body {
@@ -159,7 +163,7 @@ footer .bg-footer {
         font-size: 3.8rem;
     }
 
-    main .menu .item p {
+    .wrapper-menu .menu .item p {
         font-size: 2.2rem;
     }
 }
